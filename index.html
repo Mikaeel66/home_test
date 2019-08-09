@@ -18,6 +18,8 @@ if (location.search != "")
 {
     z=location.search.substr(1).split(";")[0].split('=')
     document.getElementById("demo").innerHTML += z[0] + z[1] + '<br>'
+    if(z[0] + z[1] =='nametest')
+      document.getElementById("demo").innerHTML = 'Tähän voin kirjoittaa omia juttuja......<br>'
 
     var x = location.search.substr(1).split(";")
     for (var i=0; i<x.length; i++)
