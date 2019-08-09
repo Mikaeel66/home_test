@@ -16,11 +16,13 @@ document.getElementById("demo").innerHTML = ''
 
 if (location.search != "")
 {
+    z=location.search.substr(1).split(";")[0].split('=')
+    document.getElementById("demo").innerHTML += z[0] + z[1] + '<br>'
+
     var x = location.search.substr(1).split(";")
     for (var i=0; i<x.length; i++)
     {
          var y = x[i].split("=");
-         document.getElementById("demo").innerHTML += y + '<br>'
          //alert("Key '" + y[0] + "' has the content '" + y[1]+"'")
     }
 }
