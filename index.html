@@ -12,13 +12,16 @@ a.map(x=>{
   document.getElementById("demo").innerHTML += x*4 + '<br>'
 })
 
+document.getElementById("demo").innerHTML = ''
+
 if (location.search != "")
 {
     var x = location.search.substr(1).split(";")
     for (var i=0; i<x.length; i++)
     {
          var y = x[i].split("=");
-         alert("Key '" + y[0] + "' has the content '" + y[1]+"'")
+         document.getElementById("demo").innerHTML += y + '<br>'
+         //alert("Key '" + y[0] + "' has the content '" + y[1]+"'")
     }
 }
 </script>
